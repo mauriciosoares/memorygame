@@ -1,0 +1,39 @@
+#board .card{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    position: relative;
+    -webkit-transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
+}
+
+.card .face{
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.card .back{
+    background: red;
+    z-index: 10;
+}
+
+.card .front{
+    -webkit-transform: rotateY(180deg);
+    background: green;
+}
+
+.card.active{
+    -webkit-transform: rotateY(180deg);  
+}
+
+.card.inactive{
+    opacity: 0;
+}

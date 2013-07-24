@@ -11,7 +11,7 @@ var game = (function() {
 
 	// function to start game, receives the number of pair of cards
 	function start (numberOfCards) {
-		document.getElementById('pergunta').remove();
+		document.getElementById('question').remove();
 		nCards = numberOfCards * 2;
 		createCards();
 

@@ -4,6 +4,8 @@ var game = (function() {
 	var cards = [],
 	nCards,
 	timer = 0,
+	timerDiv = document.getElementById('timer'),
+	timerInterval,
 	board = document.getElementById('board'),
 	activeCards = document.getElementsByClassName('active');
 
@@ -13,8 +15,10 @@ var game = (function() {
 		nCards = numberOfCards * 2;
 		createCards();
 
-		setInterval(function() {
+		timerDiv.innerHTML = timer;
+		timerInterval = setInterval(function() {
 			timer++;
+			timerDiv.innerHTML = timer;
 		}, 1000);
 	}
 
@@ -130,6 +134,7 @@ var game = (function() {
 
 	// finishes the game
 	function endGame() {
+		clearInterval(timerInterval);
 		alert('Ueba! você demorou ' + timer + ' segundos para terminar');
 	}
 

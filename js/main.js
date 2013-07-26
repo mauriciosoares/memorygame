@@ -135,7 +135,7 @@ var game = (function() {
 	// finishes the game
 	function endGame() {
 		clearInterval(timerInterval);
-		alert('Ueba! você demorou ' + timer + ' segundos para terminar');
+		alert('Você terminou o jogo em ' + timer + 'segundos :)');
 	}
 
 	return{

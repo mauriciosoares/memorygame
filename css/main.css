@@ -22,18 +22,86 @@
 
 .card .back{
     background: red;
+    background-image:-webkit-linear-gradient(#f68080,red);
     z-index: 10;
+    border:3px solid white;
+    border-radius:5px;
 }
-
+.card .back:hover {
+    opacity:0.90;
+}
 .card .front{
     -webkit-transform: rotateY(180deg);
     background: green;
+    background-image:-webkit-linear-gradient(#f68080,#008000);
+    border:3px solid white;
+    border-radius:5px;
+    font-size:50px;
+    text-shadow:black 1px 1px 2px;
+    line-height:100px;
+
+ -webkit-animation:twinkle-text 1.5s infinite;
+ -moz-animation:twinkle-text 1.5s infinite;
+ -o-animation:twinkle-text 1.5s infinite;
+ -ms-animation:twinkle-text 1.5s infinite;
+
+}
+.card .front:hover {
+    opacity:0.90;
 }
 
-.card.active{
+.card.active {
     -webkit-transform: rotateY(180deg);  
 }
 
-.card.inactive{
+
+.card.inactive {
     opacity: 0;
+}
+
+body {
+    background:black;
+    font-family: candara;
+    color:white;
+    margin:0;
+}
+
+section {
+    width:100%;
+    height:auto;
+    padding:10px;
+    padding-left:0;
+    padding-right:0;
+    background:#6eaee8;
+    color:black;
+}
+input {
+    padding:10px;
+    border:1px solid black;
+    border-radius:10px;
+    box-shadow:silver 1px 1px 2px inset;
+    font-size:20px;
+    margin-top:10px;
+}
+button {
+    padding:10px;
+    border:1px solid black;
+    background:#003366;
+    color:white;
+    font-weight:bold;
+}
+span {
+    font-size:25px;
+}
+#timer {
+    width:100px;
+    font-size:30px;
+    display:block;
+    margin:auto;
+    padding:10px;
+    border-radius:50px;
+    background:red;
+    text-align:center;
+    display:none;
+    line-height: 30px;
 }

@@ -6,15 +6,22 @@
         <title>Rock Memory</title>
 
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/SimpleAnimationCSS.css"type="text/css" href="">
+
+
     </head>
     <body>
-        <p id="question">
-            Com quantos pares de cartas você gostaria de jogar?<br />
-            <input type="text" id="qtdCartas" />
-            <input type="button" onClick="game.start(document.getElementById('qtdCartas').value);" />
+      <section>
+        <center><p id="question">
+            <span>Com quantos pares de cartas você gostaria de jogar?<br /></span>
+            <input type="text" id="qtdCartas" placeholder="Quantidade de cartas..."/>
+            <button type="button" onClick="game.start(document.getElementById('qtdCartas').value);" id="startGame" >Criar cartas</button>
+      </section></center>
         </p>
         <div id="timer"></div>
         <div id="board"></div>
+
         <script src="js/main.js"></script>
+
     </body>
 </html>

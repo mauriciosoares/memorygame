@@ -1,0 +1,167 @@
+/*
+ 
+Project: SimpleAnimationCSS 0.1 BETA
+Author: Valdinei França
+Data: 28/07/2013
+Licensed under the MIT license
+Copyright (c) 2013
+ 
+*/
+ 
+ 
+/* Make twinkle in the images  */
+.twinkle-image {
+ -webkit-animation:twinkle-image 1.5s infinite;
+ -moz-animation:twinkle-image 1.5s infinite;
+ -o-animation:twinkle-image 1.5s infinite;
+ -ms-animation:twinkle-image 1.5s infinite;
+}
+@-webkit-keyframes twinkle-image {/* For Chrome and Safare */
+ 90% {
+ opacity:0.80;
+ }
+ 20% {
+ opacity:0.90;
+ }
+}
+@-moz-keyframes twinkle-image {/* For Mozilla Fire fox */
+ 90% {
+ opacity:0.80;
+ }
+ 20% {
+ opacity:0.90;
+ }
+}
+@-o-keyframes twinkle-image {/* For Opera */
+ 90% {
+ opacity:0.80;
+ }
+ 20% {
+ opacity:0.90;
+ }
+}
+@-ms-keyframes twinkle-image {/* For Internet Explore */
+ 90% {
+ opacity:0.80;
+ }
+ 20% {
+ opacity:0.90;
+ }
+}
+/* End twinkle-image */
+ 
+/* ========================================================================= */
+ 
+/* Make twinkle in the texts  */
+.twinkle-text {
+ -webkit-animation:twinkle-text 1.5s infinite;
+ -moz-animation:twinkle-text 1.5s infinite;
+ -o-animation:twinkle-text 1.5s infinite;
+ -ms-animation:twinkle-text 1.5s infinite;
+}
+@-webkit-keyframes twinkle-text {/* For Chrome and Safare */
+ 90% {
+ opacity:0.70;
+ }
+ 20% {
+ opacity:0.90;
+ }
+}
+@-moz-keyframes twinkle-image {/* For Mozilla Fire fox */
+ 90% {
+ opacity:0.70;
+ }
+ 20% {
+ opacity:0.90;
+ text-shadow:gray 1px 1px 3px;
+ }
+}
+@-o-keyframes twinkle-image {/* For Opera */
+ 90% {
+ opacity:0.70;
+ }
+ 20% {
+ opacity:0.90;
+ text-shadow:gray 1px 1px 3px;
+ }
+}
+@-ms-keyframes twinkle-image {/* For Internet Explore */
+ 90% {
+ opacity:0.70;
+ }
+ 20% {
+ opacity:0.90;
+ text-shadow:gray 1px 1px 3px;
+ }
+}
+/* End twinkle-text */
+ 
+/* ========================================================================= */
+ 
+/* 's class brings an element from right to left */
+/* está classe traz um elemento da direita para esquerda */
+.comes-here {
+ -webkit-animation:comes-here 1.5s 1;
+ -moz-animation:comes-here 1.5s 1;
+ -o-animation:comes-here 1.5s 1;
+ -ms-animation:comes-here 1.5s 1;
+ 
+ 
+ -webkit-animation-delay:2s;
+ -moz-animation-delay:2s;
+ -o-animation-delay:2s;
+ -ms-animation-delay:2s;
+ 
+}
+@-webkit-keyframes comes-here {/* For Chrome and Safare */
+ 10% {
+ margin-left:300px;
+ position:absolute;
+ opacity:0.0;
+ }
+ 80% {
+ opacity:0.90;
+ }
+ 20% {
+ border-radius:50px;
+ }
+}
+@-moz-keyframes comes-here {/* For Mozilla Fire fox */
+ 10% {
+ margin-left:300px;
+ position:absolute;
+ opacity:0.0;
+ }
+ 80% {
+ opacity:0.90;
+ }
+ 20% {
+ border-radius:50px;
+ }
+}
+@-o-keyframes comes-here {/* For Opera */
+ 10% {
+ margin-left:300px;
+ position:absolute;
+ opacity:0.0;
+ }
+ 80% {
+ opacity:0.90;
+ }
+ 20% {
+ border-radius:50px;
+ }
+}
+@-ms-keyframes comes-here {/* For Internet Explore */
+ 10% {
+ margin-left:300px;
+ position:absolute;
+ opacity:0.0;
+ }
+ 80% {
+ opacity:0.90;
+ }
+ 20% {
+ border-radius:50px;
+ }
+}

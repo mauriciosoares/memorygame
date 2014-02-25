@@ -19,6 +19,7 @@ var game = (function() {
 		timerInterval = setInterval(function() {
 			timer++;
 			timerDiv.innerHTML = timer;
+			timerDiv.style.display = 'block';
 		}, 1000);
 	}
 

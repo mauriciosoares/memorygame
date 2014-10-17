@@ -19,13 +19,14 @@ var game = (function() {
 		timerInterval = setInterval(function() {
 			timer++;
 			timerDiv.innerHTML = timer;
+			timerDiv.style.display = 'block';
 		}, 1000);
 	}
 
 	// create the cards in the game
 	function createCards () {
 		var valueCard = 1;
-
+        
 		// counts the number of cards defined by the user
 		for(var i = 1; i <= nCards; i++) {
 			// use 3 variables to define card front and back
@@ -89,6 +90,7 @@ var game = (function() {
 				theCard.classList.add('active');
 				checkCards();
 			}
+
 		}
 	}
 
@@ -118,6 +120,7 @@ var game = (function() {
 					if(nCards === 0) {
 						endGame();
 						return false;
+
 					}
 				}, 2000);
 
@@ -130,12 +133,42 @@ var game = (function() {
 			}
 
 		}
+
 	}
 
 	// finishes the game
 	function endGame() {
 		clearInterval(timerInterval);
-		alert('Você terminou o jogo em ' + timer + 'segundos :)');
+
+	// create a button in the end of the game
+      function buttonRestartGame() {
+        var buttonRestart = document.createElement('button');
+            buttonRestart.setAttribute('type','button');
+            buttonRestart.setAttribute('id','buttonRestart');
+        var buttonText = document.createTextNode('Resetar game');
+            buttonRestart.appendChild(buttonText);
+        var body = document.querySelector('body');
+            body.appendChild(buttonRestart);
+
+            // restart the game
+            buttonRestart.addEventListener('click', function() {
+            	location.reload();
+            });
+      }
+
+      // create a text in the end of game
+      function inTheEndShowText() {
+      	var textElement = document.createElement('text');
+      	    textElement.setAttribute('id','textEnd');
+      	var writeText = document.createTextNode('Você terminou o jogo em ' + timer + ' segundos :');
+      	    textElement.appendChild(writeText);
+      	var body = document.querySelector('body');
+      	    body.appendChild(textElement);
+      }
+      
+      buttonRestartGame();
+      inTheEndShowText();
+
 	}
 
 	return{

@@ -105,3 +105,15 @@ span {
     display:none;
     line-height: 30px;
 }
+
+#buttonRestart {
+    border-radius:5px;
+}
+#textEnd {
+    display:block;
+    margin:auto;
+    padding:10px;
+    font-size:20px;
+    color:black;
+    background:#6eaee8;
+}

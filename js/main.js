@@ -90,6 +90,7 @@ var game = (function() {
 				theCard.classList.add('active');
 				checkCards();
 			}
+
 		}
 	}
 
@@ -118,7 +119,9 @@ var game = (function() {
 					// if there is no card on the table, finishes the game
 					if(nCards === 0) {
 						endGame();
+						location.reload();
 						return false;
+
 					}
 				}, 2000);
 
@@ -131,12 +134,42 @@ var game = (function() {
 			}
 
 		}
+
 	}
 
 	// finishes the game
 	function endGame() {
 		clearInterval(timerInterval);
-		alert('Você terminou o jogo em ' + timer + 'segundos :)');
+
+	// create a button in the end of the game
+      function buttonRestartGame() {
+        var buttonRestart = document.createElement('button');
+            buttonRestart.setAttribute('type','button');
+            buttonRestart.setAttribute('id','buttonRestart');
+        var buttonText = document.createTextNode('Resetar game');
+            buttonRestart.appendChild(buttonText);
+        var body = document.querySelector('body');
+            body.appendChild(buttonRestart);
+
+            // restart the game
+            buttonRestart.addEventListener('click', function() {
+            	location.reload();
+            });
+      }
+
+      // create a text in the end of game
+      function inTheEndShowText() {
+      	var textElement = document.createElement('text');
+      	    textElement.setAttribute('id','textEnd');
+      	var writeText = document.createTextNode('Você terminou o jogo em ' + timer + ' segundos :');
+      	    textElement.appendChild(writeText);
+      	var body = document.querySelector('body');
+      	    body.appendChild(textElement);
+      }
+      
+      buttonRestartGame();
+      inTheEndShowText();
+
 	}
 
 	return{

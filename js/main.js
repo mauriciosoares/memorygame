@@ -26,7 +26,7 @@ var game = (function() {
 	// create the cards in the game
 	function createCards () {
 		var valueCard = 1;
-
+        
 		// counts the number of cards defined by the user
 		for(var i = 1; i <= nCards; i++) {
 			// use 3 variables to define card front and back
@@ -119,7 +119,6 @@ var game = (function() {
 					// if there is no card on the table, finishes the game
 					if(nCards === 0) {
 						endGame();
-						location.reload();
 						return false;
 
 					}
